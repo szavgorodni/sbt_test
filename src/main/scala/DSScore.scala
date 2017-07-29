@@ -46,6 +46,7 @@ object DSScore {
 
     val ss = SparkSession.builder
       .master(spark_master)
+      .enableHiveSupport() // hive dependency added to build.sbt
       .appName(app_name)
       .getOrCreate()
 
